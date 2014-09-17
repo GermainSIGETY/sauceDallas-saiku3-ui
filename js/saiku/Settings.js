@@ -114,14 +114,13 @@ if (Settings.BIPLUGIN5) {
     Settings.BIPLUGIN = true;
 }
 
-Settings.INITIAL_QUERY = false;
+Settings.INITIAL_QUERY = true;
 if (document.location.hash) {
     var hash = document.location.hash;
     if (hash.length > 11 && hash.substring(1, 11) == "query/open") {
         Settings.INITIAL_QUERY = true;
     }
 }
-
 
 /**
  * < IE9 doesn't support Array.indexOf
@@ -173,12 +172,12 @@ if ($.blockUI) {
 
 }
 
-if (window.location.hostname && (window.location.hostname == "dev.analytical-labs.com" || window.location.hostname == "demo.analytical-labs.com" )) {
+//if (window.location.hostname && (window.location.hostname == "dev.analytical-labs.com" || window.location.hostname == "demo.analytical-labs.com" )) {
     Settings.USERNAME = "admin";
     Settings.PASSWORD = "admin";
-    Settings.DEMO = true;
+    Settings.DEMO = false;
     Settings.UPGRADE = false;
-}
+//}
 
 var isIE = (function(){
     var undef, v = 3; 
